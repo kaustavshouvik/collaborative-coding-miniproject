@@ -52,7 +52,7 @@ const Room = ({ roomName, userName, socket }) => {
         </div>
         <div className='editor-and-board'>
           <h1>Editor and Board</h1>
-          <DrawBoard />
+          <DrawBoard socket={socket} roomName={roomName} />
         </div>
         <div className='chat-box'>
           <h1>Chat Box</h1>

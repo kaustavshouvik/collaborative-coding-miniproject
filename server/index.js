@@ -41,6 +41,11 @@ io.on('connection', (socket) => {
     
     io.to(payload.roomName).emit('room-data', rooms[payload.roomName]);
   })
+  
+  socket.on('draw', (payload) => {
+    // console.log(payload)
+    socket.to(payload.roomName).emit('draw', payload);
+  })
 
   socket.on('chat', (payload) => {
     // console.log(payload);
